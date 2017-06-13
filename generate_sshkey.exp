@@ -1,0 +1,11 @@
+#!/usr/bin/expect -d
+# set timeout 30
+spawn ssh-keygen -t rsa -P ""
+expect "id_rsa): "
+send "\r"
+#expect {
+#    "+\r\n*$ " { exp_continue  }
+#    "Overwrite (y/n)? " { send "n\r"; exp_continue }
+#    "" {  }
+#    eof {  }
+#}
